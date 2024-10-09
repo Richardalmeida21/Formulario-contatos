@@ -38,23 +38,6 @@
     </form>
 
     <script src="index.js"></script>
-    <script>
-        document.getElementById('clientForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-
-            // Exibe o alerta do SweetAlert
-            Swal.fire({
-                title: 'Sucesso!',
-                text: 'Formulário enviado com sucesso!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Envia o formulário após o usuário clicar em "OK"
-                    event.target.submit();
-                }
-            });
-        });
-    </script>
+    
 </body>
 </html>
