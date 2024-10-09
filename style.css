@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(background.png);
+    gap: 1rem;
+}
+
+h1 {
+    color: rgb(255, 0, 191);
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 80%;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 30px;
+    border: 1px solid rgb(255, 0, 191);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .5rem;
+}
+
+.form-group i {
+    color:rgb(255, 0, 191);
+    font-size: 1rem;
+}
+
+form input {
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid rgb(255, 0, 191);
+    color: rgb(255, 0, 191);
+}
+
+::placeholder {
+    color:rgb(255, 0, 191);
+    font-weight: bolder;
+}
+
+.btn {
+    border: none;
+    background-color: rgb(255, 0, 191);
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 70%;
+    }
+    
+}
+

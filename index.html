@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Clientes Mais Gata</title>
+</head>
+<body>
+    <h1>Clientes Mais Gata</h1>
+
+    <form id="clientForm" action="https://api.sheetmonkey.io/form/pj2Ykn4jg1HpT6SnDvhs1f" method="post">
+
+        <div class="form-group">
+            <label for="nome"></label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="name" name="nome" required placeholder="Nome da cliente">
+        </div>
+        
+        <div class="form-group">
+            <label for="contato"></label>
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="phone" name="contato" required placeholder="Contato da cliente">
+        </div>
+        
+        <div class="form-group">
+            <label for="complemento"></label>
+            <i class="fa-solid fa-message"></i>
+            <input type="text" id="complement" name="complemento" placeholder="Complementos">
+        </div>
+        
+        <div class="form-group">
+            <i class="fa-solid fa-paper-plane"></i>
+            <input type="submit" value="Enviar" class="btn">
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('clientForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Exibe o alerta do SweetAlert
+            Swal.fire({
+                title: 'Sucesso!',
+                text: 'Formulário enviado com sucesso!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Envia o formulário após o usuário clicar em "OK"
+                    event.target.submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
