@@ -77,6 +77,13 @@ form input {
     cursor: pointer;
 }
 
+form a {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(255, 0, 191);
+    text-decoration: none;
+}
+
 @media screen and (max-width: 768px) {
     form {
         width: 90%;
